@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-3-HTML</title>
+  <style>
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .input-wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      align-items: flex-start;
+    }
+
+    select {
+      width: 120px;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .checkbox-element {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      .input-wrapper {
+        flex-direction: column;
+      }
+
+      .input {
+        width: auto;
+      }
+
+      .checkbox {
+        flex-direction: column;
+        gap: 0rem;
+      }
+
+      .checkbox-element {
+        flex-direction: column;
+        gap: 0rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form class="form" method="post" action="#">
+    <div class="input-wrapper">
+      <div class="input">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname">
+      </div>
+      <div class="input">
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname">
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="input">
+        <label for="contact">Contact Number:</label>
+        <input type="tel" name="contact" id="contact">
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input">
+        <label for="uname">Username:</label>
+        <input type="text" name="uname" id="uname">
+      </div>
+      <div class="input">
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass">
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input">
+        <label for="addr">Address:</label>
+        <textarea name="addr" id="addr" cols="21" rows="3"></textarea>
+      </div>
+      <div class="input">
+        <span>Gender:</span>
+        <span style="margin-top: 1rem;">
+          <input type="radio" name="gender" id="male" value="male">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">Female</label>
+        </span>
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input">
+        <label for="qualification">Qualification:</label>
+        <select name="qualification" id="qualification">
+          <option value="">--Select--</option>
+          <option value="bca">BCA</option>
+          <option value="mca">MCA</option>
+          <option value="btech">B. Tech</option>
+          <option value="mtech">M. Tech</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="experience">Experience:</label>
+        <select name="experience" id="experience">
+          <option value="">--Select--</option>
+          <option value="fresher">Fresher</option>
+          <option value="1">1 Year</option>
+          <option value="2">2 Years</option>
+          <option value="5">5 Years</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="checkbox">
+      <div>Coding Langiages:</div>
+      <div class="checkbox-element">
+        <div>
+          <input type="checkbox" name="c/c++" id="c/c++">
+          <label for="c/c++">C/C++</label>
+        </div>
+        <div>
+          <input type="checkbox" name="java" id="java">
+          <label for="java">Java</label>
+        </div>
+        <div>
+          <input type="checkbox" name="c#" id="c#">
+          <label for="c#">C#</label>
+        </div>
+        <div>
+          <input type="checkbox" name="php" id="php">
+          <label for="php">PHP</label>
+        </div>
+        <div>
+          <input type="checkbox" name="python" id="python">
+          <label for="python">Python</label>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+
+</html>
